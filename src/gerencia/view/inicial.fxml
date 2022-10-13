@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox alignment="CENTER" prefHeight="330.0" prefWidth="384.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="gerencia.view.MainViewController">
+   <children>
+      <Label prefHeight="39.0" prefWidth="201.0" text="Registros de Carga Horária Estendida" />
+   </children>
+</VBox>

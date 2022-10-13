@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="740.0" prefWidth="1045.0" styleClass="basico" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gerencia.view.CadastroController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="29.0" prefWidth="894.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="550.0" text="Cadastro de Funcionário" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="47.0" prefWidth="894.0" spacing="20.0">
+         <children>
+            <Label text="Nome: ">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="nome" prefHeight="26.0" prefWidth="370.0" />
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <HBox fx:id="hbox" alignment="CENTER" prefHeight="52.0" prefWidth="894.0" spacing="20.0">
+         <children>
+            <Label text="Dias da Semana:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label text="Carga Horária Semanal:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="comboCarga" prefWidth="150.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="46.0" prefWidth="631.0" spacing="20.0">
+         <children>
+            <Label text="Cor Relacionada:">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <ColorPicker fx:id="color">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </ColorPicker>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="74.0" prefWidth="894.0">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <children>
+            <Button fx:id="cadastrar" mnemonicParsing="false" onAction="#clicarCadastrar" text="Cadastrar" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="375.0" prefWidth="894.0">
+         <children>
+            <TableView fx:id="table" prefHeight="400.0">
+              <columns>
+                <TableColumn fx:id="colunaCodigo" editable="false" maxWidth="59.99999922513962" minWidth="52.0" prefWidth="52.80001753568649" text="Código" />
+                <TableColumn fx:id="colunaNome" maxWidth="185.0" minWidth="185.0" onEditCommit="#onNomeChanged" prefWidth="185.0" text="Nome" />
+                  <TableColumn fx:id="colunaDias" maxWidth="266.39988708496094" onEditCommit="#onDiasChanged" prefWidth="266.39988708496094" text="Dias da Semana" />
+                  <TableColumn fx:id="colunaCh" maxWidth="84.0" minWidth="84.0" onEditCommit="#onChChanged" prefWidth="84.0" text="Carga Horária" />
+                  <TableColumn fx:id="colunaCor" maxWidth="52.0" minWidth="52.0" prefWidth="52.0" text="Cor" />
+                  <TableColumn fx:id="colunaExcluir" editable="false" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" text="Excluir" />
+              </columns>
+            </TableView>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#clicarAtualizar" text="Atualizar" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
